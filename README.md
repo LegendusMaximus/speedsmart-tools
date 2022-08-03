@@ -8,6 +8,11 @@ This needs to be created as:
 - SpeedSmart will truncate a network name containing the & character, and a program can easily restore those names given a list of what they are
 - Network names containing a # symbol are not included in the export. We need to identify these by location/IP and ISP/time/a combination and add them.
 
+## Project parts
+- [x] Get back my full length SpeedSmart table
+- [ ] Restore the full network names for networks containing & or #
+- [ ] Get the Count column back in my new combined table
+
 
 ## Ideas
 - Receive the last 3000 speedtests via email, rather than opening file
