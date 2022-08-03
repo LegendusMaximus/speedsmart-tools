@@ -1,7 +1,7 @@
 import csv
 
 def restore_full_length(originaltable, latesttable, newtablename):
-    # This function will give you a full-length SpeedSmart table
+    # This function will save a full-length SpeedSmart table under the specified name
     with open(originaltable, "r") as ss_original_file:
         with open (latesttable, "r") as ss_latest_file:
             # Get the first speedtest present in the file
@@ -25,9 +25,18 @@ def restore_full_length(originaltable, latesttable, newtablename):
             else:
                 writing = writing+","
     with open (latesttable, "r") as ss_latest_file:    
-        ss_latest_file.readline()
-        ss_latest_file.readline()
-        writing = writing+ss_latest_file.read()
+        latesttablelist = []
+        for index, row in enumerate(csv.reader(ss_latest_file)):
+            if index > 2:
+                row.pop(0)
+                latesttablelist.append(row)
+    for row in latesttablelist:
+        for index, item in enumerate(row):
+            writing = writing+"\""+item+"\""
+            if index == len(row)-1:
+                writing = writing+"\n"
+            else:
+                writing = writing+","
     with open (newtablename, "w") as combinedfile:
         combinedfile.write(writing)
         print("Written full table to "+newtablename)
