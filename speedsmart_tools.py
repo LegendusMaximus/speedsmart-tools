@@ -9,8 +9,12 @@ def restore_full_length(originaltable, latesttable):
             firsttest.pop(0)
             print(firsttest)
             count = 1
+            inserting = []
             for row in csv.reader(ss_original_file):
                 row.pop(0)
+                inserting.append(row)
                 if row == firsttest:
                     print("Found first test in original file, row ", count)
+                    break
                 count += 1
+    print(inserting)
