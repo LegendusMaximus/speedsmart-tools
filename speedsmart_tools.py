@@ -4,17 +4,13 @@ def restore_full_length(originaltable, latesttable):
     # This function will give you a full-length SpeedSmart table
     with open(originaltable, "r") as ss_original_file:
         with open (latesttable, "r") as ss_latest_file:
-            # Remove the headers
-            ss_latest_file.readline()
             # Get the first speedtest present in the file
-            firsttest = ss_latest_file.readline()
-            firsttest = firsttest.split(",").pop(0)
+            firsttest = list(csv.reader(ss_latest_file))[1]
+            firsttest.pop(0)
+            print(firsttest)
             count = 1
-            for row in ss_original_file:
-                row = row.split(",").pop(0)
-                print(row)
-                print(firsttest)
-                input()
+            for row in csv.reader(ss_original_file):
+                row.pop(0)
                 if row == firsttest:
-                    print("Found first test in original file, row "+count)
-                    count += 1
+                    print("Found first test in original file, row ", count)
+                count += 1
