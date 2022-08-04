@@ -1,4 +1,6 @@
 import csv
+import speedsmart_config as config
+andnetworks = config.andnetworks
 
 def restore_full_length(originaltable, latesttable, newtablename):
     # This function will save a full-length SpeedSmart table under the specified name
@@ -41,3 +43,8 @@ def restore_full_length(originaltable, latesttable, newtablename):
         combinedfile.write(writing)
         print("Written full table to "+newtablename)
 
+def add_replacing_network(truncated, full):
+    with open(andnetworks, "r") as read:
+        text = read.read()
+    with open(andnetworks, "w") as andfile:
+        andfile.write(text+"\n\""+truncated+"\",\""+full+"\"")

@@ -1,2 +1,3 @@
 import speedsmart_tools
-speedsmart_tools.restore_full_length("original.csv", "latest.csv", "fulllength.csv")
+import speedsmart_config as config
+speedsmart_tools.restore_full_length(config.original, config.latest, config.fulllength)
