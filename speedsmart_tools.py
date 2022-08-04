@@ -48,3 +48,26 @@ def add_replacing_network(truncated, full):
         text = read.read()
     with open(andnetworks, "w") as andfile:
         andfile.write(text+"\n\""+truncated+"\",\""+full+"\"")
+def add_hashtag_network(name, ip):
+    with open(config.hashnetworks, "r") as read:
+        text = read.read()
+    with open(config.hashnetworks, "w") as hashfile:
+        hashfile.write(text+"\n\""+name+"\",\""+ip+"\"")
+
+def hashtag_replacing(table):
+    ips = []
+    names = []
+    with open(config.hashnetworks, "r") as hashnetworks:
+        with open(table, "r") as table:
+            tablereader = list(csv.reader(table))
+            hashreader = list(csv.reader(hashnetworks))
+            for row in hashreader:
+                print(row)
+                names.append(row[0])
+                ips.append(row[1])
+            for row in tablereader:
+                ip = row[15]
+                if ip in ips:
+                    for index, ipadr in enumerate(ips):
+                        if ipadr == ip:
+                            row[14] = names[index]
