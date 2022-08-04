@@ -7,7 +7,7 @@ latest = "latest.csv"
 # The path to the new file that the program will create and write the full-length table to
 fulllength = "fulllength.csv"
 
-# The path to the file containing tr\uncated and full-length network names
+# The path to the file containing truncated and full-length network names
 andnetworks = "&networks.sst-data"
 
 # The path to the file containing network names paired with IP addresses

@@ -109,4 +109,26 @@ def and_replacing(table):
                 writing = writing+","
     with open (table2, "w") as combinedfile:
         combinedfile.write(writing)
-    
+
+def restore_count(table):
+    with open (table, "r") as readtable:
+        tablereader = list(csv.reader(table))
+        tablelen = len(tablereader)-1
+        tablereader[0].insert(0, "Count")
+        for i, row in enumerate(tablereader):
+            if i >= 1:
+                row.insert(0, str(tablelen))
+                tablelen = tablelen-1
+                readersave = tablereader
+    with open(table, "w") as writingfile:
+        writing = ""
+        for row in readersave:
+            for index, item in enumerate(row):
+                writing = writing+"\""+item+"\""
+                if index == len(row)-1:
+                    writing = writing+"\n"
+                else:
+                    writing = writing+","
+        with open (table2, "w") as combinedfile:
+            combinedfile.write(writing)
+

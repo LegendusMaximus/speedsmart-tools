@@ -10,10 +10,9 @@ This needs to be created as:
 
 ## Project parts
 - [x] Get back my full length SpeedSmart table
-- [ ] Restore the full network names for networks containing & or #
+- [x] Restore the full network names for networks containing & or #
 - [ ] Get the Count column back in my new combined table
 - [ ] Optional: add average calculation whenever the code runs
-
 
 ## Ideas
 - Receive the last 3000 speedtests via email, rather than opening file
