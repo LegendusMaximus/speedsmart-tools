@@ -96,7 +96,7 @@ def and_replacing(table):
             for row in tablereader:
                 truncatedname = row[14]
                 if truncatedname in truncatednames:
-                    for index, truncatedname2 in enumerate(truncatedname):
+                    for index, truncatedname2 in enumerate(truncatednames):
                         if truncatedname2 == truncatedname:
                             row[14] = names[index]
     writing = ""
