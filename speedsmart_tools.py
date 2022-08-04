@@ -57,12 +57,12 @@ def add_hashtag_network(name, ip):
 def hashtag_replacing(table):
     ips = []
     names = []
+    table2 = table
     with open(config.hashnetworks, "r") as hashnetworks:
         with open(table, "r") as table:
             tablereader = list(csv.reader(table))
             hashreader = list(csv.reader(hashnetworks))
             for row in hashreader:
-                print(row)
                 names.append(row[0])
                 ips.append(row[1])
             for row in tablereader:
@@ -71,3 +71,14 @@ def hashtag_replacing(table):
                     for index, ipadr in enumerate(ips):
                         if ipadr == ip:
                             row[14] = names[index]
+    writing = ""
+    for row in tablereader:
+        for index, item in enumerate(row):
+            writing = writing+"\""+item+"\""
+            if index == len(row)-1:
+                writing = writing+"\n"
+            else:
+                writing = writing+","
+    with open (table2, "w") as combinedfile:
+        combinedfile.write(writing)
+    
