@@ -81,4 +81,32 @@ def hashtag_replacing(table):
                 writing = writing+","
     with open (table2, "w") as combinedfile:
         combinedfile.write(writing)
+
+def and_replacing(table):
+    truncatednames = []
+    names = []
+    table2 = table
+    with open(config.andnetworks, "r") as andnetworks:
+        with open(table, "r") as table:
+            tablereader = list(csv.reader(table))
+            andreader = list(csv.reader(andnetworks))
+            for row in andreader:
+                truncatednames.append(row[0])
+                names.append(row[1])
+            for row in tablereader:
+                truncatedname = row[14]
+                if truncatedname in truncatednames:
+                    for index, truncatedname2 in enumerate(truncatedname):
+                        if truncatedname2 == truncatedname:
+                            row[14] = names[index]
+    writing = ""
+    for row in tablereader:
+        for index, item in enumerate(row):
+            writing = writing+"\""+item+"\""
+            if index == len(row)-1:
+                writing = writing+"\n"
+            else:
+                writing = writing+","
+    with open (table2, "w") as combinedfile:
+        combinedfile.write(writing)
     
