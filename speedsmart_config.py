@@ -21,3 +21,6 @@ hashnetworks = "#networks.sst-data"
 
 # A setting to decide whether the count column is restored during the program. 0 = no, 1 = yes
 count = 1
+
+# The following setting should be set to 0 if your SpeedSmart table comes out full-length when exported by SpeedSmart. If you have more than 3000 tests or have somehow ended up with two tables with overlap, set it to 1
+puttingtogether = 1
