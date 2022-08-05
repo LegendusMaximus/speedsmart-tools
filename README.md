@@ -8,6 +8,13 @@ This needs to be created as:
 - SpeedSmart will truncate a network name containing the & character, and a program can easily restore those names given a list of what they are
 - Network names containing a # symbol are not included in the export (i.e. They have a row but the name comes through as "N/a"). We need to identify these by location/IP and ISP/time/a combination and add them.
 
+## Installation
+If you would like to have a go with this on your computer, here is how to get it installed:
+
+1. Download the code as a ZIP file or clone the repository.
+2. Edit the speedsmart_config.py file with valid file paths.
+3. Run the start.py file to add replacing networks or start the tool. To start the tool without any input first, run main.py
+
 ## Project parts/To Do list
 - [x] Get back my full length SpeedSmart table
 - [x] Restore the full network names for networks containing & or #
