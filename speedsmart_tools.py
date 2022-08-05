@@ -129,6 +129,5 @@ def restore_count(table):
                     writing = writing+"\n"
                 else:
                     writing = writing+","
-        with open (table2, "w") as combinedfile:
-            combinedfile.write(writing)
+        writingfile.write(writing)
 
