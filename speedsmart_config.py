@@ -1,6 +1,6 @@
 # SpeedSmart tools - Configuration file
 # This file contains configuration settings for this program. Make sure they are correct before moving onto other debugging methods.
-# The following two options MUST BE CHANGED/VERIFIED before the program can be used
+# The following two options MUST BE CHANGED/VERIFIED before the program can be used They do not need to be changed if the puttingtogether setting is set to 0.
 
 # The path to the file containing your first 3000 speedtests taken with the app
 original = "original.csv"
@@ -21,7 +21,7 @@ andnetworks = "&networks.sst-data"
 # The path to the file containing network names paired with IP addresses. The default file has some, but you may need to add more using start.py or create a new file if desired.
 hashnetworks = "#networks.sst-data"
 
-# A setting to decide whether the count column is restored during the program. 0 = no, 1 = yes
+# A setting to decide whether the count column is restored during the program. 0 is no, 1 is yes
 count = 1
 
 # The following setting should be set to 0 if your SpeedSmart table comes out full-length when exported by SpeedSmart. If you have more than 3000 tests or have somehow ended up with two tables with overlap, set it to 1
