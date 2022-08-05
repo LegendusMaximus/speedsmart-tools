@@ -112,7 +112,7 @@ def and_replacing(table):
 
 def restore_count(table):
     with open (table, "r") as readtable:
-        tablereader = list(csv.reader(table))
+        tablereader = list(csv.reader(readtable))
         tablelen = len(tablereader)-1
         tablereader[0].insert(0, "Count")
         for i, row in enumerate(tablereader):
