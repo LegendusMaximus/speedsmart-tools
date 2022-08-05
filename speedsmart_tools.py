@@ -131,3 +131,21 @@ def restore_count(table):
                     writing = writing+","
         writingfile.write(writing)
 
+def delete_count(table):
+    with open(table, "r") as tablefile:
+        reader = csv.reader(tablefile)
+        readersave = list(reader)
+        if readersave[0][0] == "Count":
+            for row in readersave:
+                row.pop(0)
+    with open(table, "w") as writingfile:
+        print(readersave)
+        writing = ""
+        for row in readersave:
+            for index, item in enumerate(row):
+                writing = writing+"\""+item+"\""
+                if index == len(row)-1:
+                    writing = writing+"\n"
+                else:
+                    writing = writing+","
+        writingfile.write(writing)
