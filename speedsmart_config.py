@@ -13,6 +13,8 @@ latest = "latest.csv"
 # The path to the new file that the program will create and write the full-length table to. Please note that if this file exists on your system, the program will write over it. If you don't need your table putting back together, this setting should point to your most recent exported table and you should change the puttingtogether setting further down this file to 0.
 fulllength = "fulllength.csv"
 
+# The following two settings are for replacing processes in the table. To disable either of these processes completely (e.g. users on a new version of SpeedSmart will not need hashtag replacing), just change their values to 0.
+
 # The path to the file containing truncated and full-length network names. The default file has some, but you may need to add more using start.py or create a new file if desired.
 andnetworks = "&networks.sst-data"
 
