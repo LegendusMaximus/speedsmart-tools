@@ -11,7 +11,7 @@ latest = "latest.csv"
 # Lines below this DO NOT need to be changed after installing, but can be if desired.
 
 # The path to the new file that the program will create and write the full-length table to. Please note that if this file exists on your system, the program will write over it. If you don't need your table putting back together, this setting should point to your most recent exported table and you should change the puttingtogether setting further down this file to 0.
-fulllength = "fulllength.csv"
+fulllength = "SpeedSmart History.csv"
 
 # The following two settings are for replacing processes in the table. To disable either of these processes completely (e.g. users on a new version of SpeedSmart will not need hashtag replacing), just change their values to 0.
 

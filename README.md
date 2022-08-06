@@ -20,6 +20,17 @@ If you would like to have a go with this on your computer, here is how to get it
 4. Install the project requirements by using "pip install -r requirements.txt"
 5. Run the start.py file to add replacing networks or start the tool. To start the tool without any input first, run main.py
 
+## Email setup instructions
+To set up the email system to run continuously, first make sure your secrets file is ready.
+If you haven't already, rename speedsmart_secrets_example.py to speedsmart_secrets.py and add your email details (Gmail is recommended). Make sure to use an app password if using Gmail as your actual password cannot be used due to Google's security policy.
+DO NOT use your primary email account for this program as it will not work properly. Instead, create a new account and use that.
+Once your secrets file is ready, perform the following procedure on a virtual machine or another device that you think will stay turned on:
+    - Navigate to the correct directory
+    - Run the command: python3 speedsmart_email.py &
+    - It will output a process id. Disown this id by typing disown followed by the ID (e.g. disown 12345). This means that the process will not quit when you log out.
+    - Take note of this ID as you can use kill followed by the ID to stop the program if needed.
+
+
 ## Goals/To Do list
 I will check items off below once they are completed and functional
 
@@ -29,10 +40,10 @@ I will check items off below once they are completed and functional
 - [x] Get the Count column back in my new combined table
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
-- [ ] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
+- [x] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
 - [ ] Add average calculation as an optional feature to the tool. Maybe calculate these if the user includes a certain string in the email they send to the program (e.g. [[averages=true]])
 - [ ] Functionality to add new &/# replacing networks via specially-formatted email
-- [ ] What is the most secure way to store email server/address/password on a per-user basis?
+- [x] What is the most secure way to store email server/address/password on a per-user basis?
 
 ### Limitations to overcome
 - [ ] At the moment, this program will stop being useful after 6000 speedtests. I need a robust plan for continuing to create a full-length table before I hit that limit!
