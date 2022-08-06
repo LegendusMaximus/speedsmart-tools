@@ -130,3 +130,10 @@ dmypy.json
 
 # Ignoring CSV files as these should be added per computer
 *.csv
+
+# Ignoring the secrets file
+speedsmart_secrets.py
+
+# Ignoring the attachments folder as this is personal per computer
+attachments/
+attachments/*

@@ -1,6 +1,6 @@
 # SpeedSmart tools - Configuration file
 # This file contains configuration settings for this program. Make sure they are correct before moving onto other debugging methods.
-# The following two options MUST BE CHANGED/VERIFIED before the program can be used They do not need to be changed if the puttingtogether setting is set to 0.
+# The following two options MUST BE CHANGED/VERIFIED before the program can be used. They do not need to be changed if the puttingtogether setting is set to 0.
 
 # The path to the file containing your first 3000 speedtests taken with the app
 original = "original.csv"
