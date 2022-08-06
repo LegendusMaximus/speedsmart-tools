@@ -3,6 +3,8 @@ import os
 from imbox import Imbox # pip install imbox
 import traceback
 import speedsmart_secrets as settings
+import speedsmart_tools
+import speedsmart_config as config
 
 # enable less secure apps on your google account
 # https://myaccount.google.com/lesssecureapps
@@ -28,6 +30,22 @@ for (uid, message) in messages:
             print(download_path)
             with open(download_path, "wb") as fp:
                 fp.write(attachment.get('content').read())
+            speedsmart_tools.restore_full_length(config.original, download_path, config.fulllength)
+            if config.andnetworks == 0:
+                print("Skipping and replacing")
+            else:
+                print("Starting and replacing")
+                speedsmart_tools.and_replacing(config.fulllength)
+            if config.hashnetworks == 0:
+                print("Skipping hashtag replacing")
+            else:
+                print("Starting hashtag replacing")
+                speedsmart_tools.hashtag_replacing(config.fulllength)
+            if config.count == 1:
+                print("Restoring count column")
+                speedsmart_tools.restore_count(config.fulllength)
+            print("Finished!")
+
         except:
             print(traceback.print_exc())
 

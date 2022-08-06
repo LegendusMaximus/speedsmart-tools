@@ -5,6 +5,7 @@
 email = "example@example.com"
 
 # The password for the account
+# For Gmail, an app password is required and 2-Step verification must be enabled to create these
 password = "password"
 
 # The SMTP server to use.
