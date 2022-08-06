@@ -5,6 +5,7 @@ import traceback
 import speedsmart_secrets as settings
 import speedsmart_tools
 import speedsmart_config as config
+import speedsmart_attach
 
 # enable less secure apps on your google account
 # https://myaccount.google.com/lesssecureapps
@@ -45,6 +46,7 @@ for (uid, message) in messages:
                 print("Restoring count column")
                 speedsmart_tools.restore_count(config.fulllength)
             print("Finished!")
+            speedsmart_attach.attach_and_send()
 
         except:
             print(traceback.print_exc())

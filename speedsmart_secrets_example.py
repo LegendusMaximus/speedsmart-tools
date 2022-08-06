@@ -9,10 +9,10 @@ email = "example@example.com"
 password = "password"
 
 # The SMTP server to use.
-# For Gmail, use smtp.gmail.com:587
-# For Outlook, use smtp-mail.outlook.com:587
-# If you have a different email provider, look up the SMTP domain and port for Starttls
-smtp = "smtp.example.com:587"
+# For Gmail, use smtp.gmail.com
+# For Outlook, use smtp-mail.outlook.com
+# If you have a different email provider, look up the SMTP domain for Starttls
+smtp = "smtp.example.com"
 
 # The imap server for receiving the emails
 imap = "imap.example.com"
