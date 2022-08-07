@@ -19,3 +19,6 @@ imap = "imap.example.com"
 
 # The email address you will be sending your tables from
 fromemail = "example123@email.com"
+
+# API KEY - Only required if using speedsmart_api
+apikey = "XXXXXXXXXXX"
