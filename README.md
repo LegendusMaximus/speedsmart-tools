@@ -17,7 +17,7 @@ If you would like to have a go with this on your computer as a one-time experien
 
 1. Download the code as a ZIP file or clone the repository.
 2. Edit the speedsmart_config.py file with valid file paths.
-3. Rename speedsmart_secrets_example.py to speedsmart_secrets.py and add details.
+3. If you are planning to use email functionality, rename speedsmart_secrets_example.py to speedsmart_secrets.py and add details. This is not required for just running main.py or start.py
 4. Install the project requirements by using "pip install -r requirements.txt"
 5. Run the start.py file to add replacing networks or start the tool. To start the tool without any input first, run main.py
 
