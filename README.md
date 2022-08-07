@@ -10,9 +10,10 @@ This set of tools needs to be created as:
 - SpeedSmart for iOS only exports your last 3000 speedtests, and I have more than that. I would like to create a complete table file, and I think others might want to too.
 - SpeedSmart will truncate a network name containing the & character, and a program can easily restore those names given a list of what they are supposed to look like (for example, I sometimes speedtest networks called "H&M Free WiFi" and they come through as "H" in SpeedSmart).
 - Network names containing a # symbol are not included in the export (i.e. They have a row but the name comes through as "N/A"). It is possible to identify these by IP address and add them back to the file, but this process takes a long time by hand.
+- If you do a lot of speedtests, manually pressing "Export" after each one is a pain. This tool can optionally use the SpeedSmart API to auto-export.
 
-## Installation
-If you would like to have a go with this on your computer, here is how to get it installed:
+## Basic Installation
+If you would like to have a go with this on your computer as a one-time experience or manually running it every time, here is how to get it installed:
 
 1. Download the code as a ZIP file or clone the repository.
 2. Edit the speedsmart_config.py file with valid file paths.
@@ -25,11 +26,28 @@ To set up the email system to run continuously, first make sure your secrets fil
 If you haven't already, rename speedsmart_secrets_example.py to speedsmart_secrets.py and add your email details (Gmail is recommended). Make sure to use an app password if using Gmail as your actual password cannot be used due to Google's security policy.
 DO NOT use your primary email account for this program as it will not work properly. Instead, create a new account and use that.
 Once your secrets file is ready, perform the following procedure on a virtual machine or another device that you think will stay turned on:
-    - Navigate to the correct directory
-    - Run the command: python3 speedsmart_email.py &
-    - It will output a process id. Disown this id by typing disown followed by the ID (e.g. disown 12345). This means that the process will not quit when you log out.
-    - Take note of this ID as you can use kill followed by the ID to stop the program if needed.
+- Navigate to the correct directory
+- Run the command: python3 speedsmart_email.py &
+- It will output a process id. Disown this id by typing disown followed by the ID (e.g. disown 12345). This means that the process will not quit when you log out.
+- Take note of this ID as you can use kill followed by the ID to stop the program if needed.
 
+## API functionality
+Please note: This feature is for advanced users of this tool only. Users must obtain an API key to use this feature and this is not easy. Beginners/Intermediate users should have a go at the email set up instead.
+### Prerequisits
+Before you start, you first need a file named speedsmart_secrets.py with the correct settings (a newly-created email address for this program, an app password for that address, the smtp server, and your API key).
+The quickest way to make one is to rename speedsmart_secrets_example.py to speedsmart_secrets.py and edit the details to your own options. IMAP server is not needed if you won't be using speedsmart_email.py
+
+Hint: If you just can't figure out how to get hold of an API key, ask yourself these questions:
+- What URL does SpeedSmart for iOS request the export from?
+- How could you find that out?
+And, maybe after that, you will find your API key...
+
+### Setup
+To get this setup running, just use these commands on a virtual machine or other device that will likely stay on for a large amount of time:
+- python3 speedsmart_api.py &
+- # Take note of the process ID
+- disown [process-id] # Where [process-id] is the ID you took note of.
+After that, you are free to log out of the device in question
 
 ## Goals/To Do list
 I will check items off below once they are completed and functional
