@@ -4,6 +4,8 @@ A set of tools to help me export my SpeedSmart table
 ## About the tools
 This set of tools is made specifically for SpeedSmart History files which have been truncated by SpeedSmart (either due to hitting the 3000 speedtests export limit, truncation of network names containing an & character or removal of network names containing a # character). It has been designed to be relatively simple to use, just give it the required files and start it. It outputs a complete file which is useful for data analysis.
 
+Please note that this tool is mainly aimed at SpeedSmart for iOS version 7.6.15, which is quite ancient now! The reason it is made for this version is due to this one being the most accessible and me managing to stay on it. Features may or may not work with newer/older versions of SpeedSmart.
+
 ## Why is this needed?
 
 This set of tools needs to be created as:
@@ -32,7 +34,7 @@ Once your secrets file is ready, perform the following procedure on a virtual ma
 - Take note of this ID as you can use kill followed by the ID to stop the program if needed.
 
 ## API functionality
-Please note: This feature is for very advanced users of this tool only. Users must obtain an API key to use this feature and this is not easy. Beginners/Intermediate users should have a go at the email set up instead.
+Please note: This feature is for very advanced users of this tool only. Users must obtain an API key to use this feature and this is not easy. Beginners/Intermediate users should have a go at the email set up instead. The feature is also unlikely to work if you are on a newer version of SpeedSmart than 7.6.15, but you are welcome to have a go at creating a new file (e.g. speedsmart_new_versions_api.py) and changing the way the URL for the request is put together in that file.
 
 ### Prerequisites
 Before you start, you first need a file named speedsmart_secrets.py with the correct settings (a newly-created email address for this program, an app password for that address, the smtp server, and your API key).
