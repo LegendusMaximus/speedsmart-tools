@@ -32,20 +32,23 @@ Once your secrets file is ready, perform the following procedure on a virtual ma
 - Take note of this ID as you can use kill followed by the ID to stop the program if needed.
 
 ## API functionality
-Please note: This feature is for advanced users of this tool only. Users must obtain an API key to use this feature and this is not easy. Beginners/Intermediate users should have a go at the email set up instead.
-### Prerequisits
+Please note: This feature is for very advanced users of this tool only. Users must obtain an API key to use this feature and this is not easy. Beginners/Intermediate users should have a go at the email set up instead.
+
+### Prerequisites
 Before you start, you first need a file named speedsmart_secrets.py with the correct settings (a newly-created email address for this program, an app password for that address, the smtp server, and your API key).
 The quickest way to make one is to rename speedsmart_secrets_example.py to speedsmart_secrets.py and edit the details to your own options. IMAP server is not needed if you won't be using speedsmart_email.py
 
 Hint: If you just can't figure out how to get hold of an API key, ask yourself these questions:
 - What URL does SpeedSmart for iOS request the export from?
-- How could you find that out?
+- What clue does the "response = ..." line in the speedsmart_api.py file give you?
+- How could you find the URL out?
+
 And, maybe after that, you will find your API key...
 
 ### Setup
 To get this setup running, just use these commands on a virtual machine or other device that will likely stay on for a large amount of time:
 - python3 speedsmart_api.py &
-- # Take note of the process ID
+- Take note of the process ID shown
 - disown [process-id] # Where [process-id] is the ID you took note of.
 After that, you are free to log out of the device in question
 
