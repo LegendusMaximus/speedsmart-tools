@@ -62,6 +62,9 @@ I will check items off below once they are completed and functional
 - [x] Restore the full network names for networks containing & or #
 - [x] Get the Count column back in my new combined table
 
+### Useful, but not essential, features
+- [x] Automate table exports by using the SpeedSmart API
+
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
 - [x] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
 - [ ] Add average calculation as an optional feature to the tool. Maybe calculate these if the user includes a certain string in the email they send to the program (e.g. [[averages=true]])
