@@ -47,10 +47,12 @@ And, maybe after that, you will find your API key...
 
 ### Setup
 To get this setup running, just use these commands on a virtual machine or other device that will likely stay on for a large amount of time:
-- python3 speedsmart_api.py &
+- "python3 speedsmart_api.py &"
 - Take note of the process ID shown
-- disown [process-id] # Where [process-id] is the ID you took note of.
+- "disown [process-id]" Where [process-id] is the ID you took note of.
+
 After that, you are free to log out of the device in question
+Please note that only the two strings in quotes are the commands.
 
 ## Goals/To Do list
 I will check items off below once they are completed and functional
