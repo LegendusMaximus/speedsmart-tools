@@ -40,8 +40,7 @@ def all():
     for columnforcalculating in config.averagelist:
         calculate(columnforcalculating)
     
-    if countruns.count == 10:
-        print("10th run")
+    if countruns.count >= config.averageemail:
         speedsmart_attach.send_averages()
         with open("speedsmart_average_count.py", "w") as file:
             file.write("count = 0")                    
