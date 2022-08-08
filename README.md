@@ -17,7 +17,7 @@ Once the program receives an exported SpeedSmart table either manually, via emai
 This tool is mainly aimed at SpeedSmart for iOS version 7.6.15, which is quite ancient now! The reason it is made for this version is due to this one being the most accessible and me managing to stay on it. Features may or may not work with newer/older versions of SpeedSmart.
 The core logic of the program will likely still work as expected but SpeedSmart may haveupdated their API in newer versions so the API request part may not work.
 
-### Why is this needed?
+### Why is this program needed?
 
 This set of tools needs to be created as:
 - SpeedSmart for iOS only exports your last 3000 speedtests, and I have more than that. I would like to create a complete table file, and I think others might want to too.
