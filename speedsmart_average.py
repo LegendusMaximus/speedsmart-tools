@@ -2,6 +2,7 @@ import speedsmart_config as config
 import os
 import csv
 import speedsmart_average_count as countruns
+import speedsmart_attach
 
 def calculate(type):
     calculatingnum = 0
@@ -41,6 +42,7 @@ def all():
     
     if countruns.count == 10:
         print("10th run")
+        speedsmart_attach.send_averages()
         with open("speedsmart_average_count.py", "w") as file:
             file.write("count = 0")                    
     else:
