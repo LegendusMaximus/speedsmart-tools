@@ -25,7 +25,8 @@ This set of tools needs to be created as:
 - Network names containing a # symbol are not included in the export (i.e. They have a row but the name comes through as "N/A"). It is possible to identify these by IP address and add them back to the file, but this process takes a long time by hand.
 - If you do a lot of speedtests, manually pressing "Export" after each one is a pain. This tool can optionally use the SpeedSmart API to auto-export.
 
-## Basic Installation
+## Basic Installation Steps
+
 If you would like to have a go with this on your computer as a one-time experience or manually running it every time, here is how to get it installed:
 
 1. Download the code as a ZIP file or clone the repository.
