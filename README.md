@@ -72,7 +72,7 @@ Hint: If you just can't figure out how to get hold of an API key, ask yourself t
 
 And, maybe after that, you will find your API key...
 
-#### Setup
+#### Setup instructions
 To get this setup running, just use these commands on a virtual machine or other device that will likely stay on for a large amount of time:
 - "python3 speedsmart_api.py &"
 - Take note of the process ID shown
