@@ -29,7 +29,7 @@ def calculate(type):
     for name in averages:
         average = sum(averages[name])/len(averages[name]) 
         uploadaverage = sum(uploads[name])/len(uploads[name])
-        line = name+","+str(len(averages[name]))+","+str(average)+","+"\""+str(uploadaverage)+"\""+"\n"
+        line = "\""+name+"\",\""+str(len(averages[name]))+"\",\""+str(average)+"\","+"\""+str(uploadaverage)+"\""+"\n"
         lines += line
     with open ("averages/"+type+".csv", "w") as output:
         output.write(lines) 

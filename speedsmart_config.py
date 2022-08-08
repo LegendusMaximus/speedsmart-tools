@@ -31,4 +31,4 @@ puttingtogether = 1
 averages = 1
 
 # Controls which columns averages are calculated for
-averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "Server"]
+averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "Server", "Device Name"]
