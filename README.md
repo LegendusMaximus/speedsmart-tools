@@ -7,7 +7,7 @@ This set of tools is made specifically for SpeedSmart History files which have b
 ### What does the program do?
 Once the program receives an exported SpeedSmart table either manually, via email or via the API, it will perform the following tasks in order:
 
-1. If the table has hit the length limit (e.g. has been truncated at the top due to being longer than 3000 rows), the program will insert as many rows as needed from the original.csv (or equivalent) file to create a full-length table.
+1. If the table has hit the length limit (i.e. has been truncated at the top due to being longer than 3000 rows), the program will insert as many rows as needed from the original.csv (or equivalent) file to create a full-length table.
 2. If the "& replacing" feature is enabled, the program will check if any of the network names in the table match the truncated network name the user has entered. If they do, the program will replace them with the full, correct name of the network the user has entered.
 3. If the "# replacing" feature is enabled, the program will check if any of the IP addresses in the table are present in the list of IP addresses and network names. If there are any matches, the network name that matches the IP address in question will be added. This feature is needed as any network name starting with a hashtag (#) is not saved by older versions of SpeedSmart.
 4. The program will re-do the count column in the table and optionally email it back to the user.
