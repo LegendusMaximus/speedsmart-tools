@@ -83,7 +83,8 @@ Please note that only the two strings in quotes are the commands.
 
 ### Average calculations
 
-By default, this program will automatically calculate averages based on network name, ISP and Country each time it runs. You can disable this behaviour in the config file.
+By default, this program will automatically calculate averages based on network name, ISP, Country and more each time it runs. You can disable this behaviour in the config file if you would like to.
+To change which columns averages are calculated for, edit the list in the config file.
 
 ## Goals/To Do list
 
