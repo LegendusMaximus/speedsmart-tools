@@ -108,3 +108,6 @@ I will check items off below once they are completed and functional.
 ### Limitations to overcome
 - [x] At the moment, this program will stop being useful after 6000 speedtests. I need a robust plan for continuing to create a full-length table before I hit that limit! (Solution: Make the original.csv file longer than 3000 by using a generated full-length file instead of it if needed.)
 - [ ] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address)
+
+## Important Notice
+This program is not created or supported by SpeedSmart or VeeApps. It is just something fun I created that can do cool othings to my SpeedSmart table.
