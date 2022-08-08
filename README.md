@@ -97,7 +97,7 @@ I will check items off below once they are completed and functional.
 
 ### Useful, but not essential, features
 - [x] Automate table exports by using the SpeedSmart API
-- [ ] Add average calculation as an optional feature to the tool. Maybe calculate these if the user includes a certain string in the email they send to the program (e.g. [[averages=true]])
+- [x] Add average calculation as an optional feature to the tool.
 - [ ] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
