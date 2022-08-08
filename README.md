@@ -29,14 +29,14 @@ This set of tools needs to be created as:
 If you would like to have a go with this on your computer as a one-time experience or manually running it every time, here is how to get it installed:
 
 1. Download the code as a ZIP file or clone the repository.
-2. Edit the speedsmart_config.py file with valid file paths.
+2. Edit the speedsmart_config.py file with valid file paths and change settings if desired. There are comments in the file above each setting to tell you what it does.
 3. Install the project requirements by using "pip install -r requirements.txt"
 4. Run the start.py file to add replacing networks or start the tool. To start the tool without any input first, run main.py
 
 If you are interested in running the tool continuously using emails or the SpeedSmart API as a trigger, have a look at the following sections.
 
 ## Optional features
-Below, you can read about the two optional features this program comes with.
+You can read about the optional features this program comes with below.
 
 ### Email System
 The speedsmart_email.py file allows this program to automatically receive exported SpeedSmart tables via email and run the necessary actions on them before emailing the user back a full-length, correct table. It is possible to set up this file to run continuously so that you do not need to open a computer every time you export your SpeedSmart table.
