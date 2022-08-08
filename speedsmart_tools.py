@@ -132,7 +132,7 @@ def restore_count(table):
         writingfile.write(writing)
     if config.averages == 1:
         print("Starting average calculations")
-        averages.country()
+        averages.all()
 
 def delete_count(table):
     with open(table, "r") as tablefile:

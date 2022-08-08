@@ -30,5 +30,5 @@ puttingtogether = 1
 # Controls whether average calculations are enabled. Please note that due to the way the code works, this setting will only take effect if count equals 1.
 averages = 1
 
-# The path to the file where per-country averages will be saved
-countryaverage = "averages/countryaverages.csv"
+# Controls which columns averages are calculated for
+averagelist = ["ISP", "Country", "Ping Ms", "Network SSID"]

@@ -81,6 +81,10 @@ To get this setup running, just use these commands on a virtual machine or other
 After that, you are free to log out of the device in question
 Please note that only the two strings in quotes are the commands.
 
+### Average calculations
+
+By default, this program will automatically calculate averages based on network name, ISP and Country each time it runs. You can disable this behaviour in the config file.
+
 ## Goals/To Do list
 
 I will check items off below once they are completed and functional. 
