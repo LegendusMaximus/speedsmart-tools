@@ -10,11 +10,10 @@ password = "password"
 
 # The SMTP server to use.
 # For Gmail, use smtp.gmail.com
-# For Outlook, use smtp-mail.outlook.com
-# If you have a different email provider, look up the SMTP domain for Starttls
 smtp = "smtp.example.com"
 
 # The imap server for receiving the emails
+# For Gmail, use imap.gmail.com
 imap = "imap.example.com"
 
 # The email address you will be sending your tables from
