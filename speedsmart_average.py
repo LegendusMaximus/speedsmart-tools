@@ -1,6 +1,7 @@
 import speedsmart_config as config
 import os
 import csv
+import speedsmart_average_count as countruns
 
 def calculate(type):
     calculatingnum = 0
@@ -37,3 +38,12 @@ def calculate(type):
 def all():
     for columnforcalculating in config.averagelist:
         calculate(columnforcalculating)
+    
+    if countruns.count == 10:
+        print("10th run")
+        with open("speedsmart_average_count.py", "w") as file:
+            file.write("count = 0")                    
+    else:
+        writing = countruns.count+1
+        with open("speedsmart_average_count.py", "w") as file:
+            file.write("count = "+str(writing))
