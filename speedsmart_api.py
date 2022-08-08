@@ -1,3 +1,5 @@
+# This program checks the SpeedSmart API every 3 minutes for new tests. If it finds one, it will then run through all the tools and send out the full-length table via email. After that, it will wait half an hour to prevent spamming of users while they are speedtesting.
+
 import requests
 import speedsmart_secrets as secrets
 import json
@@ -6,8 +8,8 @@ import speedsmart_attach
 import time
 import speedsmart_tools
 import speedsmart_config as config
+
 # Please add your SpeedSmart API key in the secrets file before running this file.
-# This program checks the SpeedSmart API every 3 minutes for new tests. If it finds one, it will then run through all the tools and send out the full-length table via email. After that, it will wait half an hour to prevent spamming of users while they are speedtesting.
 
 lastdata = ""
 while True:

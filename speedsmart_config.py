@@ -26,3 +26,9 @@ count = 1
 
 # The following setting should be set to 0 if your SpeedSmart table comes out full-length when exported by SpeedSmart. If you have more than 3000 tests or have somehow ended up with two tables with overlap, set it to 1
 puttingtogether = 1
+
+# Controls whether average calculations are enabled. Please note that due to the way the code works, this setting will only take effect if count equals 1.
+averages = 1
+
+# The path to the file where per-country averages will be saved
+countryaverage = "averages/countryaverages.csv"
