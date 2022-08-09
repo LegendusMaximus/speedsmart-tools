@@ -1,6 +1,7 @@
 import csv
 import speedsmart_config as config
 import speedsmart_average as averages
+import operator
 
 def restore_full_length(originaltable, latesttable, newtablename):
     # This function will save a full-length SpeedSmart table under the specified name
@@ -152,3 +153,28 @@ def delete_count(table):
                 else:
                     writing = writing+","
         writingfile.write(writing)
+
+def sort_by_speed(type):
+    # 0 sorts by download, 1 sorts by upload
+    if type == 0:
+        colnum = 4
+    else:
+        colnum = 5
+    with open (config.fulllength, "r") as file:
+        reader = list(csv.reader(file))
+        for number, row in enumerate(reader):
+            if number != 0:
+                row[colnum] = float(row[colnum])
+        reader.pop(0)
+        sortedlist = sorted(reader, key=operator.itemgetter(colnum), reverse=True)
+    with open("sorting/speed.csv", "w") as writingfile:
+        writing = '"Count","Date & Time","Connection Type","Mobile Type","Download Mbps","Upload Mbps","Ping Ms","Data Used MB","Server","ISP","Country","Latitude","Longitude","Device","Device Name","Network SSID","IP Address"\n'
+        for row in sortedlist:
+            for index, item in enumerate(row):
+                writing = writing+"\""+str(item)+"\""
+                if index == len(row)-1:
+                    writing = writing+"\n"
+                else:
+                    writing = writing+","
+        writingfile.write(writing)
+
