@@ -91,6 +91,10 @@ To change which columns averages are calculated the list in the config file.
 The program includes support to sort your SpeedSmart table by download and upload speeds as well as the default sorting by date.
 To have a go with this, run the start.py file and select the option to sort by either download or upload speed. This does not occur every time the tool runs as it would take too much time.
 
+### Combining tables
+
+If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
+
 ## Goals/To Do list
 
 I will check items off below once they are completed and functional. 

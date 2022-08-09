@@ -35,3 +35,11 @@ averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "
 
 # Every how many exports the user gets emailed averages
 averageemail = 10
+
+# The following settings control the table combining feature
+
+# A list of all the tables which need putting together
+multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv"]
+
+# The file where the combined table should be saved
+combined = "combined.csv"

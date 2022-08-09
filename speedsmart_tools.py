@@ -178,3 +178,23 @@ def sort_by_speed(type):
                     writing = writing+","
         writingfile.write(writing)
 
+def combine(tables):
+    if len(tables) == 1:
+        print("You need two tables or more in the list in the config file to use this feature.")
+    for number, table in enumerate(tables):
+        if number == 0:
+            with open (table, "r") as tablefile:
+                writing = tablefile.read()
+        else:
+            with open(table, "r") as tablefile2:
+                t_reader = list(csv.reader(tablefile2))
+                t_reader.pop(0)
+                for row in t_reader:
+                    for index, item in enumerate(row):
+                        writing = writing+"\""+item+"\""
+                        if index == len(row)-1:
+                            writing = writing+"\n"
+                        else:
+                            writing = writing+","
+    with open(config.combined, "w") as writingfile:
+        writingfile.write(writing)
