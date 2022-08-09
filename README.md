@@ -84,7 +84,12 @@ Please note that only the two strings in quotes are the commands.
 ### Average calculations
 
 By default, this program will automatically calculate averages based on network name, ISP, Country and more each time it runs. You can disable this behaviour in the config file if you would like to.
-To change which columns averages are calculated for, edit the list in the config file.
+To change which columns averages are calculated the list in the config file.
+
+### Sorting your table
+
+The program includes support to sort your SpeedSmart table by download and upload speeds as well as the default sorting by date.
+To have a go with this, run the start.py file and select the option to sort by either download or upload speed. This does not occur every time the tool runs as it would take too much time.
 
 ## Goals/To Do list
 
@@ -99,6 +104,7 @@ I will check items off below once they are completed and functional.
 - [x] Automate table exports by using the SpeedSmart API
 - [x] Add average calculation as an optional feature to the tool.
 - [ ] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
+- [x] Sort the table by download/upload speed
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
 - [x] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
