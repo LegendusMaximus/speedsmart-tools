@@ -96,11 +96,8 @@ To have a go with this, run the start.py file and select the option to sort by e
 If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
 
 ### Web App
-To set up the web app, first add symlinks to all the modules (i.e. all the files in the root of the repository named speedsmart_something.py)
-Next, add symlinks to any CSV files the web app will need to access.
-You will also need to add a symlink to the averages directory.
-I know this is all very oring, but it only has to be done once per computer.
-Then, navigate to the webapp directory and run "python3 manage.py runserver"
+This program comes with an easy-to-use Django web app to view key stats and/or perform actions.
+To have a go with it, run "python3 manage.py runserver" and then visit "http://localhost:8000" in your device's browser to get started.
 
 ## Goals/To Do list
 
@@ -114,7 +111,7 @@ I will check items off below once they are completed and functional.
 ### Useful, but not essential, features
 - [x] Automate table exports by using the SpeedSmart API
 - [x] Add average calculation as an optional feature to the tool.
-- [ ] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
+- [x] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
 - [x] Sort the table by download/upload speed
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
@@ -127,4 +124,4 @@ I will check items off below once they are completed and functional.
 - [ ] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address)
 
 ## Important Notice
-This program is not created or supported by SpeedSmart or VeeApps. It is just something fun I created that can do cool othings to my SpeedSmart table.
+This program is not created or supported by SpeedSmart or VeeApps in any way. It is just something fun I created that can do cool things to my SpeedSmart table.
