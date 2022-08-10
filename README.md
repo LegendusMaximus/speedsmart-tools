@@ -84,20 +84,24 @@ Please note that only the two strings in quotes are the commands.
 ### Average calculations
 
 By default, this program will automatically calculate averages based on network name, ISP, Country and more each time it runs. You can disable this behaviour in the config file if you would like to.
-To change which columns averages are calculated the list in the config file.
+To change which columns averages are calculated for, edit the list in the config file.
+There is a bonus parameter that you can calculate averages by, and this is "Year"
 
 ### Sorting your table
 
 The program includes support to sort your SpeedSmart table by download and upload speeds as well as the default sorting by date.
-To have a go with this, run the start.py file and select the option to sort by either download or upload speed. This does not occur every time the tool runs as it would take too much time.
+To have a go with this, run the start.py file and select the option to sort by either download or upload speed. 
+Alternatively, click either of the "Sort" options under the "Quick actions" heading in the web app.
+This sorting process does not occur automatically every time the tool runs as it would take too much time.
 
 ### Combining tables
 
 If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
 
 ### Web App
+
 This program comes with an easy-to-use Django web app to view key stats and/or perform actions.
-To have a go with it, run "python3 manage.py runserver" and then visit "http://localhost:8000" in your device's browser to get started.
+To have a go with it, run "python3 speedsmart_web.py runserver" and then visit "http://localhost:8000" in your device's browser to get started.
 
 ## Goals/To Do list
 

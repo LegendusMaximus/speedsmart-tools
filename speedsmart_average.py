@@ -38,7 +38,10 @@ def calculate(type):
 
 def all():
     for columnforcalculating in config.averagelist:
-        calculate(columnforcalculating)
+        if columnforcalculating == "Year":
+            year()
+        else:
+            calculate(columnforcalculating)
     
     if countruns.count >= config.averageemail:
         speedsmart_attach.send_averages()
@@ -48,3 +51,29 @@ def all():
         writing = countruns.count+1
         with open("speedsmart_average_count.py", "w") as file:
             file.write("count = "+str(writing))
+
+def year():
+    with open(config.fulllength, "r") as table:
+        reader = list(csv.reader(table))
+        for rownum, row in enumerate(reader):
+            if rownum != 0:
+                row[1] = row[1].split("/")[2].split("-")[0]
+    averages = {}
+    uploads = {}
+    reader.pop(0)
+    for line in reader:
+        calculating = line[1]
+        if calculating not in averages:
+            averages[calculating] = []
+        averages[calculating].append(float(line[4]))
+        if calculating not in uploads:
+            uploads[calculating] = []
+        uploads[calculating].append(float(line[5]))
+    lines = "Year,Number of tests taken,Average Download speed MBPS,Average Upload speed MBPS\n"
+    for name in averages:
+        average = sum(averages[name])/len(averages[name]) 
+        uploadaverage = sum(uploads[name])/len(uploads[name])
+        line = "\""+name+"\",\""+str(len(averages[name]))+"\",\""+str(average)+"\","+"\""+str(uploadaverage)+"\""+"\n"
+        lines += line
+    with open ("averages/Year.csv", "w") as output:
+        output.write(lines) 

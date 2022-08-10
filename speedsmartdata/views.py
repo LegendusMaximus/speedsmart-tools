@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
-import stats as stats
+import speedsmart_stats as stats
 import speedsmart_average
 import speedsmart_config as config
 import speedsmart_tools
@@ -18,11 +18,7 @@ def index(request):
             fs.delete("files/"+file.name)
         filename = fs.save("files/"+file.name, file)
         print("Program started.")
-        if config.puttingtogether == 1:
-            speedsmart_tools.restore_full_length(config.original, "files/"+file.name, config.fulllength)
-        else:
-            print("Temporarily deleting the count column from your table. This will be added back later in the program if requested.")
-            speedsmart_tools.delete_count(config.fulllength)
+        speedsmart_tools.restore_full_length(config.original, "files/"+file.name, config.fulllength)
         if config.andnetworks == 0:
             print("Skipping and replacing")
         else:
@@ -68,7 +64,7 @@ def sorted(request):
 
 def averages(request):
     if request.method == "POST":
-        shutil.make_archive("../averages", 'zip', "../averages/")
+        shutil.make_archive("averages", 'zip', "averages/")
         return download("averages.zip")
     else:
         return HttpResponse("This download cannot be completed as it was not initiated through the correct button on the homepage.")
@@ -76,8 +72,7 @@ def averages(request):
 
 
 
-def download(path):
-    file_path = "../"+path
+def download(file_path):
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")

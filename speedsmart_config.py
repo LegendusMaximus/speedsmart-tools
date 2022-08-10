@@ -31,7 +31,7 @@ puttingtogether = 1
 averages = 1
 
 # Controls which columns averages are calculated for
-averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "Server", "Device Name"]
+averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "Server", "Device Name", "Year"]
 
 # Every how many exports the user gets emailed averages
 averageemail = 10
