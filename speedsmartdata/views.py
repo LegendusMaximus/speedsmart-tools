@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
 import stats as stats
 import speedsmart_average
@@ -7,6 +7,7 @@ import speedsmart_config as config
 import speedsmart_tools
 import os
 import shutil
+import speedsmart_email_function
 
 def index(request):
     completed = 0
@@ -83,3 +84,10 @@ def download(path):
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
             return response
     raise Http404
+
+def email(request):
+    if request.method == "POST":
+        speedsmart_email_function.check()
+        return render(request, "speedsmartdata/email.html")
+    else:
+        return HttpResponse("The email check needs to be initiated through the correct button on the homepage.")

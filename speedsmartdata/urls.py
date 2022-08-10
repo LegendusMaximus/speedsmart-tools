@@ -8,4 +8,6 @@ urlpatterns = [
     path("fulllength/",views.fulllength,name="fulllength"),
     path("sorted/",views.sorted,name="sorted"),
     path("averages/",views.averages,name="averages"),
+    path("email/",views.email,name="email"),
+
 ]

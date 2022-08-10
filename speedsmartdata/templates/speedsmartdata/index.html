@@ -36,7 +36,12 @@
         {% csrf_token %}
         <button type="submit">Sort table by upload speed</button>
         </form>
-<h2>Downloads</h2>
+        <br/><form method="POST" action="email/">
+            {% csrf_token %}
+            <button type="submit">Check for exports sent to the email address</button>
+            </form>
+
+        <h2>Downloads</h2>
         <form method="POST" action="fulllength/">
             {% csrf_token %}
             <button type="submit">Download unsorted full-length table</button>
