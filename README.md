@@ -4,6 +4,10 @@ A set of tools to help me export my SpeedSmart table
 ## About the tools
 This set of tools is made specifically for SpeedSmart History files which have been truncated by SpeedSmart (either due to hitting the 3000 speedtests export limit, truncation of network names containing an & character or removal of network names containing a # character). It has been designed to be relatively simple to use, just give it the required files and start it. It outputs a complete file which is useful for data analysis.
 
+### What is SpeedSmart?
+
+SpeedSmart is a website and cross-platform app used for testing your internet speed. It is simular to other speedtest sites such as speedtest.net, but is more accessible and generates a great exportable table full of stats.
+
 ### What does the program do?
 Once the program receives an exported SpeedSmart table either manually, via email or via the API, it will perform the following tasks in order:
 
@@ -40,7 +44,7 @@ If you are interested in running the tool continuously using emails or the Speed
 You can read about the optional features this program comes with below.
 
 ### Email System
-The speedsmart_email.py file allows this program to automatically receive exported SpeedSmart tables via email and run the necessary actions on them before emailing the user back a full-length, correct table. It is possible to set up this file to run continuously so that you do not need to open a computer every time you export your SpeedSmart table.
+The speedsmart_email.py file allows this program to automatically receive exported SpeedSmart tables via email and run the necessary actions on them before emailing the user back a full-length, correct table. It is possible to set up this file to run continuously so that you do not need to open a computer every time you export your SpeedSmart table. Only emails sent from the address defined as "fromemail" in the secrets file will be read, everything else will be ignored.
 
 #### Prerequisites
 To set up the email system to run continuously, first make sure your secrets file is ready.
@@ -53,6 +57,12 @@ Once your secrets file is ready, perform the following procedure on a virtual ma
 - Run the command: python3 speedsmart_email.py &
 - It will output a process id. Disown this id by typing disown followed by the ID (e.g. disown 12345). This means that the process will not quit when you log out.
 - Take note of this ID as you can use kill followed by the ID to stop the program if needed.
+
+If you would rather click a button each time to check for emails manually, you can either run the following two commands in a Python shell:
+- import speedsmart_email_function
+- speedsmart_email_function.check()
+
+Or, you can start the web app and use the button under the "Quick actions" heading.
 
 The email system has only been tested with Gmail IMAP and SMTP servers, but may work with other providers that support starttls for SMTP and SSL for IMAP.
 
@@ -125,7 +135,7 @@ I will check items off below once they are completed and functional.
 
 ### Limitations to overcome
 - [x] At the moment, this program will stop being useful after 6000 speedtests. I need a robust plan for continuing to create a full-length table before I hit that limit! (Solution: Make the original.csv file longer than 3000 by using a generated full-length file instead of it if needed.)
-- [ ] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address)
+- [x] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address). Temporary solution: Just add both the networks in question as hashtag networks.
 
 ## Important Notice
 This program is not created or supported by SpeedSmart or VeeApps in any way. It is just something fun I created that can do cool things to my SpeedSmart table.
