@@ -136,6 +136,7 @@ I will check items off below once they are completed and functional.
 ### Limitations to overcome
 - [x] At the moment, this program will stop being useful after 6000 speedtests. I need a robust plan for continuing to create a full-length table before I hit that limit! (Solution: Make the original.csv file longer than 3000 by using a generated full-length file instead of it if needed.)
 - [x] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address). Temporary solution: Just add both the networks in question as hashtag networks.
+- [ ] The email program seems to crash after running for about a day. Is this a memory limit issue? I need to investigate. No bugs get outputted in log file.
 
 ## Important Notice
 This program is not created or supported by SpeedSmart or VeeApps in any way. It is just something fun I created that can do cool things to my SpeedSmart table.
