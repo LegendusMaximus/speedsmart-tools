@@ -95,6 +95,13 @@ To have a go with this, run the start.py file and select the option to sort by e
 
 If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
 
+### Web App
+To set up the web app, first add symlinks to all the modules (i.e. all the files in the root of the repository named speedsmart_something.py)
+Next, add symlinks to any CSV files the web app will need to access.
+You will also need to add a symlink to the averages directory.
+I know this is all very oring, but it only has to be done once per computer.
+Then, navigate to the webapp directory and run "python3 manage.py runserver"
+
 ## Goals/To Do list
 
 I will check items off below once they are completed and functional. 

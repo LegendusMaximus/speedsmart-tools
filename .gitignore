@@ -137,3 +137,14 @@ speedsmart_secrets.py
 # Ignoring the attachments folder as this is personal per computer
 attachments/
 attachments/*
+
+# Avoid commiting symlinks to GitHub
+webapp/speedsmartdata/speedsmart_*
+webapp/speedsmartdata/averages
+webapp/speedsmartdata/averages/
+webapp/speedsmartdata/averages/*
+
+webapp/speedsmart_*
+webapp/averages
+webapp/averages/
+webapp/averages/*
