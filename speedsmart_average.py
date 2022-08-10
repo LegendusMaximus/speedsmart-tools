@@ -43,7 +43,7 @@ def all():
         else:
             calculate(columnforcalculating)
     
-    if countruns.count >= config.averageemail:
+    if countruns.count >= config.averageemail-1:
         speedsmart_attach.send_averages()
         with open("speedsmart_average_count.py", "w") as file:
             file.write("count = 0")                    

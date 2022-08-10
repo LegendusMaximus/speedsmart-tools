@@ -31,6 +31,7 @@ puttingtogether = 1
 averages = 1
 
 # Controls which columns averages are calculated for
+# Removing year from this list will cause problems with the web app unless you create a "Year.csv" file in the averages directory by using the speedsmart_average.year() function.
 averagelist = ["ISP", "Country", "Ping Ms", "Network SSID", "Connection Type", "Server", "Device Name", "Year"]
 
 # Every how many exports the user gets emailed averages

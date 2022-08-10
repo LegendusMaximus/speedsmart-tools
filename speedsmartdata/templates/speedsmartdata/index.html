@@ -55,7 +55,29 @@
                 <button type="submit">Download averages</button>
                 </form>
     
+    <h2>Average WiFi speeds by year</h2>
+    <table>
+    {% for row in yearavg %}
+    {% if "Year" in row %}
+    <tr>
+        {% for item in row %}
+        <th>
+            {{item}}
+        </th>
+    {%endfor %}
+    </tr>
     
+    {% else %}
+    <tr>
+    {% for item in row %}
+    <td>
+        {{item}}
+    </td>
+{%endfor %}
+</tr>
+{% endif %}
+{% endfor %}
+</table>
     <footer>
         Powered By <a href="https://github.com/LegendusMaximus/speedsmart-tools">SpeedSmart Tools</a>
     </footer>

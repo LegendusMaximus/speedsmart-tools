@@ -8,6 +8,7 @@ import speedsmart_tools
 import os
 import shutil
 import speedsmart_email_function
+import csv
 
 def index(request):
     completed = 0
@@ -38,7 +39,9 @@ def index(request):
         completed = 1
     length = stats.table_length()
     downloadavg, uploadavg, pingavg = stats.average()
-    return render(request, "speedsmartdata/index.html", {"length": length,"downloadavg": downloadavg,"uploadavg": uploadavg, "pingavg": pingavg, "completed": completed})
+    yearaverage = open("averages/Year.csv", "r")
+    yearavg = list(csv.reader(yearaverage))
+    return render(request, "speedsmartdata/index.html", {"length": length,"downloadavg": downloadavg,"uploadavg": uploadavg, "pingavg": pingavg, "completed": completed, "yearavg": yearavg})
 
 def sortdown(request):
     if request.method == "POST":
