@@ -4,7 +4,8 @@
     </head>
 <body>
     <h1>SpeedSmart Tools</h1>
-    <p>This page gives you the ability to glance at key stats and perform key actions.</p>
+    <p>Welcome to the SpeedSmart Tools Web app.</p>
+    <p>It gives you the ability to glance at key stats, perform essential actions and more.</p>
     <h2>Key Stats</h2>
     <p>This part of the page contains some key stats about your SpeedSmart table.</p>
 
@@ -26,6 +27,30 @@
         <input name="ssfile" accept=".csv" type="file" id="csv" />
         <button type="submit">Upload</button>
       </form>
+      <h2>Quick Actions</h2>
+      <form method="POST" action="sortdown/">
+    {% csrf_token %}
+    <button type="submit">Sort table by download speed</button>
+    </form>
+    <br/><form method="POST" action="sortup/">
+        {% csrf_token %}
+        <button type="submit">Sort table by upload speed</button>
+        </form>
+<h2>Downloads</h2>
+        <form method="POST" action="fulllength/">
+            {% csrf_token %}
+            <button type="submit">Download unsorted full-length table</button>
+            </form>
+        <br/><form method="POST" action="sorted/">
+            {% csrf_token %}
+            <button type="submit">Download sorted full-length table</button>
+            </form>
+            <br/><form method="POST" action="averages/">
+                {% csrf_token %}
+                <button type="submit">Download averages</button>
+                </form>
+    
+    
     <footer>
         Powered By <a href="https://github.com/LegendusMaximus/speedsmart-tools">SpeedSmart Tools</a>
     </footer>
