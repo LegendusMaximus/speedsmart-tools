@@ -137,3 +137,4 @@ speedsmart_secrets.py
 # Ignoring the attachments folder as this is personal per computer
 attachments/
 attachments/*
+averages.zip
