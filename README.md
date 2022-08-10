@@ -125,8 +125,13 @@ I will check items off below once they are completed and functional.
 ### Useful, but not essential, features
 - [x] Automate table exports by using the SpeedSmart API
 - [x] Add average calculation as an optional feature to the tool.
-- [x] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
 - [x] Sort the table by download/upload speed
+
+### Web app
+
+- [x] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
+- [x] Functionality to perform quick actions from the Django page
+- [x] Let users download and upload tables in the web app
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
 - [x] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
