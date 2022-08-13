@@ -16,13 +16,5 @@ else:
 # Save the current credentials to a file
 gauth.SaveCredentialsFile("gdrive_credentials.txt")
 
-def authorize_drive():
-    gauth = GoogleAuth()
-    gauth.DEFAULT_SETTINGS['client_config_file'] = "client_secret.json"
-    gauth.LoadCredentialsFile("gdrive_credentials.txt")
-    return GoogleDrive(gauth)
-
-
-class DriveReport(object):
-    def __init__(self):
-        self.drive = authorize_drive()    
+def upload():
+    drive = GoogleDrive(gauth)
