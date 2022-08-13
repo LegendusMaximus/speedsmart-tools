@@ -21,3 +21,9 @@ fromemail = "example123@email.com"
 
 # API KEY - Only required if using speedsmart_api
 apikey = "XXXXXXXXXXX"
+
+# Controls whether this program integrates with Google Drive
+drive = 0
+
+# The folder ID of the folder you want to upload to
+driveid = "1234567ABCDEFG"

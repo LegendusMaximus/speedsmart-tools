@@ -122,7 +122,7 @@ After that, follow the steps below:
 2. Under API's and Services, enable the Google Drive API
 3. Under the OAUTH consent screen tab, configure options. You can keep it in "Testing" mode for now.
 4. Under "Credentials", create a "OAuth Client ID" for a Desktop application and download the generated .json file. Rename this to client_secrets.json and add it to the same directory as the speedsmart-tools files.
-5. Set drive to 1 in the config file
+5. Set drive to 1 in the secrets file and add a folder ID.
 6. Run speedsmart_gdrive.py to authorize your Google account.
 
 ## Goals/To Do list
