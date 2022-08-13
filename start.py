@@ -2,6 +2,11 @@
 import speedsmart_tools
 import speedsmart_config as config
 
+try:
+    import speedsmart_secrets
+except:
+    print("Warning: Please rename speedsmart_secrets_example.py to speedsmart_secrets.py before using this tool. Failing to do this will give you problems down the line.")
+
 print("Welcome to SpeedSmart Tools!")
 print("")
 print("====================")
