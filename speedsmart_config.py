@@ -44,3 +44,6 @@ multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv",
 
 # The file where the combined table should be saved
 combined = "combined.csv"
+
+# Controls whether this program integrates with Google Drive
+drive = 0

@@ -138,3 +138,7 @@ speedsmart_secrets.py
 attachments/
 attachments/*
 averages.zip
+
+# Ignore credential files
+client_secrets.json
+gdrive_credentials.txt
