@@ -127,6 +127,8 @@ To set this up, follow the steps below:
 7. Set drive to 1 in the secrets file and paste your folder ID under "driveid".
 8. Run speedsmart_gdrive.py to authorize your Google account.
 
+Please note that once set up, average files will no longer be emailed as they will be uploaded to Drive instead. SpeedSmart tables will continue to be emailed if received via the email address or API.
+
 ## Goals/To Do list
 
 I will check items off below once they are completed and functional. 
