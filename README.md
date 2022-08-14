@@ -115,15 +115,17 @@ To have a go with it, run "python3 speedsmart_web.py runserver" and then visit "
 
 ### Google Drive
 
-This program can integrate into Google Drive and upload saved tables there. To get started, install the pydrive module.
-After that, follow the steps below:
+This program can integrate into Google Drive and upload saved tables and averages files there.
+Follow the steps below:
 
-1. Visit the Google Cloud Console
-2. Under API's and Services, enable the Google Drive API
-3. Under the OAUTH consent screen tab, configure options. You can keep it in "Testing" mode for now.
-4. Under "Credentials", create a "OAuth Client ID" for a Desktop application and download the generated .json file. Rename this to client_secrets.json and add it to the same directory as the speedsmart-tools files.
-5. Set drive to 1 in the secrets file and add a folder ID.
-6. Run speedsmart_gdrive.py to authorize your Google account.
+1. Install the PyDrive module using "pip install pydrive"
+2. Visit the [Google Developers Console](https://console.developers.google.com/)
+3. Under API's and Services, enable the Google Drive API
+4. Under the OAUTH consent screen tab, configure options. You can keep it in "Testing" mode for now.
+5. Under "Credentials", create a "OAuth Client ID" for a Desktop application and download the generated .json file. Rename this to client_secrets.json and add it to the same directory as the speedsmart-tools files.
+6. Visit the Google Drive website and create a folder you would like this program to use. Once done, copy the long ID in the address bar.
+7. Set drive to 1 in the secrets file and paste your folder ID under "driveid".
+8. Run speedsmart_gdrive.py to authorize your Google account.
 
 ## Goals/To Do list
 
