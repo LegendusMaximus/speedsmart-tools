@@ -23,4 +23,4 @@ def upload(filepath):
     gfile = drive.CreateFile({"parents":[{"id": settings.driveid}]})
     gfile.SetContentFile(filepath)
     gfile.Upload()
-    print("File uploaded")
+    print("File \""+filepath+"\" uploaded")

@@ -4,6 +4,7 @@ import csv
 import speedsmart_average_count as countruns
 import speedsmart_attach
 import speedsmart_secrets as settings
+import shutil
 
 def calculate(type):
     calculatingnum = 0
