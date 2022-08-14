@@ -113,12 +113,12 @@ If you have multiple tables (e.g. from different devices or people) that you wou
 This program comes with an easy-to-use Django web app to view key stats and/or perform actions.
 To have a go with it, run "python3 speedsmart_web.py runserver" and then visit "http://localhost:8000" in your device's browser to get started.
 
-### Google Drive
+### Google Drive Integration
 
 This program can integrate into Google Drive and upload saved tables and averages files there.
 To set this up, follow the steps below:
 
-1. Install the PyDrive module using "pip install pydrive"
+1. Install the PyDrive module using "pip install pydrive". You can skip this if you have already installed everything in requirements.txt
 2. Visit the [Google Developers Console](https://console.developers.google.com/) and create a new project if needed.
 3. Under API's and Services, enable the "Google Drive API"
 4. Under the OAUTH consent screen tab, configure options. You can keep your app in "Testing" mode for now.
