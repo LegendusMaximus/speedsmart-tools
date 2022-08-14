@@ -116,7 +116,7 @@ To have a go with it, run "python3 speedsmart_web.py runserver" and then visit "
 ### Google Drive
 
 This program can integrate into Google Drive and upload saved tables and averages files there.
-Follow the steps below:
+To set this up, follow the steps below:
 
 1. Install the PyDrive module using "pip install pydrive"
 2. Visit the [Google Developers Console](https://console.developers.google.com/) and create a new project if needed.
