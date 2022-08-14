@@ -1,4 +1,5 @@
 # This module uploads a given file to Google drive. If you haven't used it before, you will need to authorise it with your Google account first by running it.
+
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import speedsmart_secrets as settings
@@ -11,7 +12,7 @@ if gauth.credentials is None:
     # Authenticate if they're not there
     gauth.LocalWebserverAuth()
 elif gauth.access_token_expired:
-# Refresh them if expired
+    # Refresh them if expired
     gauth.Refresh()
 else:
     # Initialize the saved creds
