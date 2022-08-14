@@ -1,3 +1,4 @@
+# This module uploads a given file to Google drive. If you haven't used it before, you will need to authorise it with your Google account first by running it.
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import speedsmart_secrets as settings
