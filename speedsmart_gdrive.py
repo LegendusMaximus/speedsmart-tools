@@ -1,5 +1,7 @@
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
+import speedsmart_secrets as settings
+import speedsmart_config as config
 
 gauth = GoogleAuth()
 # Try to load saved client credentials
@@ -18,3 +20,7 @@ gauth.SaveCredentialsFile("gdrive_credentials.txt")
 
 def upload():
     drive = GoogleDrive(gauth)
+    gfile = drive.CreateFile({"parents":[{"id": settings.driveid}]})
+    gfile.SetContentFile(config.fulllength)
+    gfile.Upload()
+    print("File uploaded")
