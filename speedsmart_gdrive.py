@@ -18,9 +18,9 @@ else:
 # Save the current credentials to a file
 gauth.SaveCredentialsFile("gdrive_credentials.txt")
 
-def upload():
+def upload(filepath):
     drive = GoogleDrive(gauth)
     gfile = drive.CreateFile({"parents":[{"id": settings.driveid}]})
-    gfile.SetContentFile(config.fulllength)
+    gfile.SetContentFile(filepath)
     gfile.Upload()
     print("File uploaded")

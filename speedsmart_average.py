@@ -3,6 +3,7 @@ import os
 import csv
 import speedsmart_average_count as countruns
 import speedsmart_attach
+import speedsmart_secrets as settings
 
 def calculate(type):
     calculatingnum = 0
@@ -42,15 +43,19 @@ def all():
             year()
         else:
             calculate(columnforcalculating)
-    
-    if countruns.count >= config.averageemail-1:
-        speedsmart_attach.send_averages()
-        with open("speedsmart_average_count.py", "w") as file:
-            file.write("count = 0")                    
+    if settings.drive == 1:
+        shutil.make_archive("averages", 'zip', "averages/")
+        import speedsmart_gdrive
+        speedsmart_gdrive.upload("averages.zip")
     else:
-        writing = countruns.count+1
-        with open("speedsmart_average_count.py", "w") as file:
-            file.write("count = "+str(writing))
+        if countruns.count >= config.averageemail-1:
+            speedsmart_attach.send_averages()
+            with open("speedsmart_average_count.py", "w") as file:
+                file.write("count = 0")                    
+        else:
+            writing = countruns.count+1
+            with open("speedsmart_average_count.py", "w") as file:
+                file.write("count = "+str(writing))
 
 def year():
     with open(config.fulllength, "r") as table:

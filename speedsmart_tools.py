@@ -2,6 +2,7 @@ import csv
 import speedsmart_config as config
 import speedsmart_average as averages
 import operator
+import speedsmart_secrets as settings
 
 def restore_full_length(originaltable, latesttable, newtablename):
     # This function will save a full-length SpeedSmart table under the specified name
@@ -134,6 +135,9 @@ def restore_count(table):
     if config.averages == 1:
         print("Starting average calculations")
         averages.all()
+        if settings.drive == 1:
+            import speedsmart_gdrive
+            speedsmart_gdrive.upload(config.fulllength)
 
 def delete_count(table):
     with open(table, "r") as tablefile:
