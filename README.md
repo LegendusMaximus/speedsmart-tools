@@ -111,7 +111,7 @@ If you have multiple tables (e.g. from different devices or people) that you wou
 ### Web App
 
 This program comes with an easy-to-use Django web app to view key stats and/or perform actions.
-To have a go with it, run "python3 speedsmart_web.py runserver" and then visit "http://localhost:8000" in your device's browser to get started.
+To have a go with it, run "python3 speedsmart_web.py runserver --noreload" and then visit "http://localhost:8000" in your device's browser to get started.
 
 ### Google Drive Integration
 
