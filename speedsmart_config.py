@@ -44,3 +44,6 @@ multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv",
 
 # The file where the combined table should be saved
 combined = "combined.csv"
+
+# How long in seconds to wait in between email checks if using speedsmart_email.py
+wait = 30
