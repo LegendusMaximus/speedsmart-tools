@@ -143,6 +143,7 @@ I will check items off below once they are completed and functional.
 - [x] Add average calculation as an optional feature to the tool.
 - [x] Sort the table by download/upload speed
 - [x] Integrate with Google Drive
+- [x] Combine multiple tables into one
 
 ### Web app
 

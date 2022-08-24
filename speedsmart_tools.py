@@ -3,6 +3,8 @@ import speedsmart_config as config
 import speedsmart_average as averages
 import operator
 import speedsmart_secrets as settings
+from datetime import datetime
+import dateutil.parser as dparser
 
 def restore_full_length(originaltable, latesttable, newtablename):
     # This function will save a full-length SpeedSmart table under the specified name
@@ -147,7 +149,6 @@ def delete_count(table):
             for row in readersave:
                 row.pop(0)
     with open(table, "w") as writingfile:
-        print(readersave)
         writing = ""
         for row in readersave:
             for index, item in enumerate(row):
@@ -202,3 +203,27 @@ def combine(tables):
                             writing = writing+","
     with open(config.combined, "w") as writingfile:
         writingfile.write(writing)
+    sort_by_date(config.combined)
+    delete_count(config.combined)
+    config.averages = 0
+    restore_count(config.combined)
+    config.averages = 1
+
+def sort_by_date(table):
+    writing = '"Count","Date & Time","Connection Type","Mobile Type","Download Mbps","Upload Mbps","Ping Ms","Data Used MB","Server","ISP","Country","Latitude","Longitude","Device","Device Name","Network SSID","IP Address"\n'
+    with open(table, "r") as tablefile:
+        reader = list(csv.reader(tablefile))
+    reader.pop(0)
+    for i, row in enumerate(reader):
+        row[1] = dparser.parse(row[1], fuzzy=True)
+    sortedlist = sorted(reader, key=operator.itemgetter(1), reverse=False)
+    for row in sortedlist:
+        for index, item in enumerate(row):
+            writing = writing+"\""+str(item)+"\""
+            if index == len(row)-1:
+                writing = writing+"\n"
+            else:
+                writing = writing+","
+    with open(config.combined, "w") as writingfile:
+        writingfile.write(writing)
+
