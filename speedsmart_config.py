@@ -21,7 +21,7 @@ andnetworks = "&networks.sst-data"
 # The path to the file containing network names paired with IP addresses. The default file has some, but you may need to add more using start.py or create a new file if desired.
 hashnetworks = "#networks.sst-data"
 
-# A setting to decide whether the count column is restored during the program. 0 is no, 1 is yes
+# A setting to decide whether the count column is restored during the program. 0 is no, 1 is yes. Not restoring the count column will cause problems in some features that rely on it.
 count = 1
 
 # The following setting should be set to 0 if your SpeedSmart table comes out full-length when exported by SpeedSmart. If you have more than 3000 tests or have somehow ended up with two tables with overlap, set it to 1
@@ -40,7 +40,7 @@ averageemail = 10
 # The following settings control the table combining feature
 
 # A list of all the tables which need putting together
-multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv", "adrian.csv", "oscar.csv", "simon.csv"]
+multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv", "adrian.csv", "oscar.csv", "simon.csv", "th1.csv", "bnt.csv"]
 
 # The file where the combined table should be saved
 combined = "combined.csv"
