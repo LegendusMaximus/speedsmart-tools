@@ -11,5 +11,6 @@ import speedsmart_email_function
 
 while True:
     time.sleep(config.wait)
-    print("Checking email address...")
+    if config.emailoutput == 1:
+        print("Checking email address...")
     speedsmart_email_function.check()

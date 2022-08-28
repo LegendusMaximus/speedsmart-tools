@@ -45,5 +45,10 @@ multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv",
 # The file where the combined table should be saved
 combined = "combined.csv"
 
+# Some general email settings, speedsmart_secrets.py should contain account details
+
 # How long in seconds to wait in between email checks if using speedsmart_email.py
 wait = 30
+
+# Whether to output every time the email address is checked. Disabling this setting will not prevent output each time a CSV file is processed.
+emailoutput = 0
