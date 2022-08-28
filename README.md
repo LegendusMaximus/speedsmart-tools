@@ -33,10 +33,11 @@ This set of tools needs to be created as:
 
 If you would like to have a go with this on your computer as a one-time experience or manually running it every time, here is how to get it installed:
 
-1. Download the code as a ZIP file or clone the repository.
-2. Edit the speedsmart_config.py file with valid file paths and change settings if desired. There are comments in the file above each setting to tell you what it does.
-3. Install the project requirements by using "pip install -r requirements.txt"
-4. Run the start.py file to add replacing networks or start the tool. To start the tool without any input first, run main.py
+1. Download the code as a ZIP file or clone the repository and then navigate to the root directory of the repository.
+2. Install the project requirements by using "pip install -r requirements.txt"
+3. Edit the speedsmart_config.py file with valid file paths and change settings if desired. There are comments in the file above each setting to tell you what it does.
+4. Rename speedsmart_secrets_example.py to speedsmart_secrets.py. For basic usage, you can leave all the options in this file as they are.
+5. Run the start.py file to start the tool, add replacing networks and more. Upon running this file, you will be presented with a simple main menu where you select an option by typing a number followed by enter. To start the tool without any input first, run main.py
 
 If you are interested in running the tool continuously using emails or the SpeedSmart API as a trigger, have a look at the following sections.
 
@@ -79,9 +80,9 @@ Hint: If you just can't figure out how to get hold of an API key, ask yourself t
 - What URL does SpeedSmart for iOS request the export from?
 - What clue does the "response = ..." line in the speedsmart_api.py file give you?
 - How could you find the URL out?
-
-And, maybe after that, you will find your API key...
-
+`   
+And,     maybe after that, you will find your API key...
+    
 #### Setup instructions
 To get this setup running, just use these commands on a virtual machine or other device that will likely stay on for a large amount of time:
 - "python3 speedsmart_api.py &"
