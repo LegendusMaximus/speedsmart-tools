@@ -1,5 +1,5 @@
 # SpeedSmart Secrets - Example
-# This is an example of what a secrets file should look like. To use this file, change the name to something else (e.g. speedsmart_secrets.py) and make sure that this is reflected in the import statement at the top of the email.py file.
+# This is an example of what a secrets file should look like. To use this file, change its name to speedsmart_secrets.py and add your details to it
 
 # The email address you would like this program to use. This should not be used by other devices/apps.
 email = "example@example.com"
