@@ -10,6 +10,8 @@ import shutil
 
 def attach_and_send():
     #assert isinstance(settings.fromemail, list)
+    if config.emailsending == 0:
+        return
     msg = MIMEMultipart()
     msg['From'] = settings.email
     msg['To'] = COMMASPACE.join(settings.fromemail)
@@ -32,6 +34,8 @@ def attach_and_send():
     print("Email sent!")
 
 def send_averages():
+    if config.emailsending == 0:
+        return
     shutil.make_archive("averages", 'zip', "averages/")
     msg = MIMEMultipart()
     msg['From'] = settings.email

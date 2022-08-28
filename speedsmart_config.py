@@ -52,3 +52,6 @@ wait = 30
 
 # Whether to output every time the email address is checked. Disabling this setting will not prevent output each time a CSV file is processed.
 emailoutput = 0
+
+# Disabling the following setting will stop the program trying to send any emails
+emailsending = 1
