@@ -48,7 +48,7 @@ def restore_full_length(originaltable, latesttable, newtablename):
         print("Written full table to "+newtablename)
 
 def add_replacing_network(truncated, full):
-    with open(andnetworks, "r") as read:
+    with open(config.andnetworks, "r") as read:
         text = read.read()
     with open(config.andnetworks, "w") as andfile:
         andfile.write(text+"\n\""+truncated+"\",\""+full+"\"")
