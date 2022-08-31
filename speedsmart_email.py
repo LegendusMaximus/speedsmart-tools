@@ -8,9 +8,16 @@ import speedsmart_config as config
 import speedsmart_attach
 import time
 import speedsmart_email_function
+import logging
 
-while True:
-    time.sleep(config.wait)
-    if config.emailoutput == 1:
-        print("Checking email address...")
-    speedsmart_email_function.check()
+logging.basicConfig(filename="speedsmart_email.log",level=logging.ERROR)
+
+try:
+    while True:
+        time.sleep(config.wait)
+        if config.emailoutput == 1:
+            print("Checking email address...")
+        speedsmart_email_function.check()
+except Exception as err:
+    logging.error(err)
+    print(err)
