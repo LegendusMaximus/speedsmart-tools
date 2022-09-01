@@ -134,7 +134,7 @@ dmypy.json
 # Ignoring the secrets file
 speedsmart_secrets.py
 
-# Ignoring the attachments folder as this is personal per computer
+# Ignoring the attachments folder and averages file as these are personal per computer
 attachments/
 attachments/*
 averages.zip
@@ -142,3 +142,6 @@ averages.zip
 # Ignore credential files
 client_secrets.json
 gdrive_credentials.txt
+
+# Ignoring log files
+*.log
