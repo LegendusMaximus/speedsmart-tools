@@ -143,5 +143,3 @@ averages.zip
 client_secrets.json
 gdrive_credentials.txt
 
-# Ignoring log files
-*.log
