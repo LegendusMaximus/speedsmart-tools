@@ -80,7 +80,7 @@ Hint: If you just can't figure out how to get hold of an API key, ask yourself t
 - What URL does SpeedSmart for iOS request the export from?
 - What clue does the "response = ..." line in the speedsmart_api.py file give you?
 - How could you find the URL out?
-`   
+   
 And,     maybe after that, you will find your API key...
     
 #### Setup instructions
@@ -129,6 +129,8 @@ To set this up, follow the steps below:
 8. Run speedsmart_gdrive.py to authorize your Google account.
 
 Please note that once set up, average files will no longer be emailed as they will be uploaded to Drive instead. SpeedSmart tables will continue to be emailed if received via the email address or API.
+
+If you get an error about expired credentials after a while, just delete the "gdrive_credentials.txt" file and repeat step 8.
 
 ## Goals/To Do list
 
