@@ -4,6 +4,8 @@ A set of tools to help me export my SpeedSmart table
 ## About the tools
 This set of tools is made specifically for SpeedSmart History files which have been truncated by SpeedSmart (either due to hitting the 3000 speedtests export limit, truncation of network names containing an & character or removal of network names containing a # character). It has been designed to be relatively simple to use, just give it the required files and start it. It outputs a complete file which is useful for data analysis.
 
+These tools have helped me create an entire [dataset of WiFi speeds](https://wifiallaroundthe.eu)
+
 ### What is SpeedSmart?
 
 SpeedSmart is a website and cross-platform app used for testing your internet speed. It is simular to other speedtest sites such as speedtest.net, but is more accessible and generates a great exportable table full of stats.
@@ -109,8 +111,8 @@ This sorting process does not occur automatically every time the tool runs as it
 
 If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
 
-### Searchiing the table
-If you would like to search the table (i.e. get a list of all rows containing a specific search string), then just run start.py and choose option 7.
+### Searching the table
+If you would like to search the SpeedSmart table (i.e. get a list of all rows containing a specific search string), then just run start.py and choose option 7.
 The result can be found in the "Results" directory.
 
 ### Web App
