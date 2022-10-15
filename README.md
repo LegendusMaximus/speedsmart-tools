@@ -109,6 +109,10 @@ This sorting process does not occur automatically every time the tool runs as it
 
 If you have multiple tables (e.g. from different devices or people) that you would like to combine into one, add the paths to the tables in the config file and then run start.py and pick option 6.
 
+### Searchiing the table
+If you would like to search the table (i.e. get a list of all rows containing a specific search string), then just run start.py and choose option 7.
+The result can be found in the "Results" directory.
+
 ### Web App
 
 This program comes with an easy-to-use Django web app to view key stats and/or perform actions.
