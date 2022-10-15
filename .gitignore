@@ -143,3 +143,5 @@ averages.zip
 client_secrets.json
 gdrive_credentials.txt
 
+# Ignoring search results
+Results/*

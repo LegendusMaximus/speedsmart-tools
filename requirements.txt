@@ -1,7 +1,5 @@
 imbox
 requests
-csv
-json
 django
 pydrive
 python-dateutil

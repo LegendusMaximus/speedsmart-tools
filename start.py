@@ -13,7 +13,7 @@ print("")
 print("====================")
 print("")
 print("What would you like to do?")
-menu = ["Run the tool", "Add an and-replace network", "Add a hashtag network", "Sort your table by Download speed", "Sort your table by upload speed", "Combine multiple tables defined in the config file"]
+menu = ["Run the tool", "Add an and-replace network", "Add a hashtag network", "Sort your table by Download speed", "Sort your table by upload speed", "Combine multiple tables defined in the config file", "Search your table"]
 for i, item in enumerate(menu):
     print(i+1, ". ", item)
 print("[Type the number of your choice.]")
@@ -36,5 +36,7 @@ elif choice == 6:
     print("Combining tables, please wait...")
     speedsmart_tools.combine(config.multipletables)
     print("Finished.")
+elif choice == 7:
+    import speedsmart_searchprint("Find your results file in the Results directory")
 else:
     print("Invalid selection.")

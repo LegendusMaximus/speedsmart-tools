@@ -5,7 +5,7 @@ import speedsmart_average_count as countruns
 import speedsmart_attach
 import speedsmart_secrets as settings
 import shutil
-
+config.fulllength = "combined.csv"
 def calculate(type):
     calculatingnum = 0
     uploads = {}
