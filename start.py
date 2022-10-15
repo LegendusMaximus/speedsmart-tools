@@ -37,6 +37,7 @@ elif choice == 6:
     speedsmart_tools.combine(config.multipletables)
     print("Finished.")
 elif choice == 7:
-    import speedsmart_searchprint("Find your results file in the Results directory")
+    import speedsmart_search
+    print("Find your results file in the Results directory")
 else:
     print("Invalid selection.")
