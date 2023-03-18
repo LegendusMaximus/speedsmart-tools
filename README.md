@@ -53,12 +53,12 @@ Simply follow the basic instructions above and expand with the optional features
 These are for the program to know what network names need adding back to the table when we process it. You can manually modify them, but it's easier to use the start.py file to do it for you. It's our own file extension, short for SpeedSmart Tools data.
 
 ### Questions about SpeedSmart's new table format
-SpeedSmart have changed their export format slightly, between December 2022 and February 2023. Here's what's happened, in order of implemantition:
-- Values (e.g. 20.00) are rounded/trimmed (e.g. to 20). This also does slightly reduce longitude/latitude accuracy, but this shouldn't be a problem. WiFi speeds seem to be just zero-trimmed and not rounded. This applies to all exported tables.
+SpeedSmart have changed their export format slightly, between December 2022 and February 2023. Here's what's happened, in order of implementation:
+- Values (e.g. 20.00) are rounded/trimmed (e.g. to 20). This also does slightly reduce longitude/latitude accuracy, but this shouldn't be a problem. WiFi speeds seem to be just zero-trimmed and not rounded. This applies to all exported tables after December 10, 2022.
 - A "Mobile Type" column has been added to exports on the newer app versions.
 - "Jitter" and "Notes" columns have been added to tables exported on newer versions of the Android app, and possibly iOS.
 
-I'm not saying any of these changes are bad, in fact the addition of Jitter is cool, but this just causes a few problems as this program was sort of hacked together to work with the old format and there is far too much calling a specific item from a list and knowing which item, for example, the SSID will be.
+I'm not saying any of these changes are bad, in fact the addition of Jitter is cool, but this just causes a few problems as this program was sort of hacked together to work with the old format and there is far too much calling a specific item from a list and knowing which item, for example the SSID, will be.
 
 #### Does the program still work?
 Essentially, yes it does. But I'll need to update parts over the coming weeks/months as it was sort of hacked together originally for the old format.
