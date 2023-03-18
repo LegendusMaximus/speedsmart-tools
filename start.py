@@ -1,9 +1,15 @@
 # This program lets users select which part of the tool they would like to use from a menu
-
+import os
 try:
     import speedsmart_secrets
 except:
     print("Warning: Please rename speedsmart_secrets_example.py to speedsmart_secrets.py before using this tool. Failing to do this will give you problems down the line.")
+if not os.path.isdir("averages/"):
+    os.makedirs("averages/", exist_ok=True)
+if not os.path.isdir("Files/"):
+    os.makedirs("Files/", exist_ok=True)
+if not os.path.isdir("sorting/"):
+    os.makedirs("sorting/", exist_ok=True)
 
 import speedsmart_tools
 import speedsmart_config as config
@@ -15,7 +21,7 @@ print("")
 print("What would you like to do?")
 menu = ["Run the tool", "Add an and-replace network", "Add a hashtag network", "Sort your table by Download speed", "Sort your table by upload speed", "Combine multiple tables defined in the config file", "Search your table"]
 for i, item in enumerate(menu):
-    print(i+1, ". ", item)
+    print(str(i+1)+". "+item)
 print("[Type the number of your choice.]")
 choice = int(input())
 if choice == 1:
