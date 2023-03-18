@@ -55,7 +55,7 @@ These are for the program to know what network names need adding back to the tab
 ### Questions about SpeedSmart's new table format
 SpeedSmart have changed their export format slightly, between December 2022 and February 2023. Here's what's happened, in order of implementation:
 - Values (e.g. 20.00) are rounded/trimmed (e.g. to 20). This also does slightly reduce longitude/latitude accuracy, but this shouldn't be a problem. WiFi speeds seem to be just zero-trimmed and not rounded. This applies to all exported tables after December 10, 2022.
-- A "Mobile Type" column has been added to exports on the newer app versions.
+- A "Mobile Network" column has been added to exports on the newer app versions.
 - "Jitter" and "Notes" columns have been added to tables exported on newer versions of the Android app, and possibly iOS.
 
 I'm not saying any of these changes are bad, in fact the addition of Jitter is cool, but this just causes a few problems as this program was sort of hacked together to work with the old format and there is far too much calling a specific item from a list and knowing which item, for example the SSID, will be.
@@ -66,8 +66,8 @@ Essentially, yes it does. But I'll need to update parts over the coming weeks/mo
 ### What should I do with exported tables containing the Notes and Jitter columns?
 This is a new SpeedSmart feature applying to tables on newer versions of the app. We will work to support this, but in the meantime columns must be manually removed in Excel or simular before being imported.
 
-### What about the Mobile Type column?
-As this program is specifically about WiFi speeds, we decided to delete it from tables we combine. The info in it can easily be gained from the ISP or IP columns, and for any WiFi tests it is "N/A". This column will be detected and deleted when combining tables, but the original and latest files must have it removed.
+### What about the Mobile Network column?
+As this program is specifically about WiFi speeds, we decided to delete it from tables we combine. The info in it can easily be gained from the ISP or IP columns, and for any WiFi tests it is "N/A". This column will be detected and deleted when combining tables, but the original and latest files must have it removed manually.
 
 ## Optional features
 You can read about the optional features this program comes with below.
@@ -195,6 +195,7 @@ I will check items off below once they are completed and functional.
 - [x] At the moment, this program will stop being useful after 6000 speedtests. I need a robust plan for continuing to create a full-length table before I hit that limit! (Solution: Make the original.csv file longer than 3000 by using a generated full-length file instead of it if needed.)
 - [x] If there are two networks that have been truncated to the same thing by SpeedSmart, we need to differentiate them (e.g. by IP address). Temporary solution: Just add both the networks in question as hashtag networks.
 - [ ] The email program seems to crash after running for about a day. Is this a memory limit issue? I need to investigate. No bugs get outputted in log file.
+- [ ] Need to make the program work with the new format of SpeedSmart tables (in progress, see above)
 
 ## Important Notice
 This program is not created or supported by SpeedSmart or VeeApps in any way. It is just something fun I created that can do cool things to my SpeedSmart table.
