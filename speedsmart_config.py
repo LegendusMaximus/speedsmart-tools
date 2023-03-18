@@ -40,7 +40,7 @@ averageemail = 10
 # The following settings control the table combining feature
 
 # A list of all the tables which need putting together
-multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv", "adrian.csv", "oscar.csv", "simon.csv", "th1.csv", "bnt.csv"]
+multipletables = [fulllength, "george.csv", "george2.csv", "flo.csv", "tim.csv", "adrian.csv", "oscar.csv", "simon.csv", "th1.csv", "bnt.csv", "Tim2.csv"]
 
 # The file where the combined table should be saved
 combined = "combined.csv"

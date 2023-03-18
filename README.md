@@ -43,6 +43,32 @@ If you would like to have a go with this on your computer as a one-time experien
 
 If you are interested in running the tool continuously using emails or the SpeedSmart API as a trigger, have a look at the following sections.
 
+## FAQ
+We have answered a few of the most Frequently asked questions below:
+
+### How do I get started?
+Simply follow the basic instructions above and expand with the optional features below.
+
+### What are the *.sst-data files?
+These are for the program to know what network names need adding back to the table when we process it. You can manually modify them, but it's easier to use the start.py file to do it for you. It's our own file extension, short for SpeedSmart Tools data.
+
+### Questions about SpeedSmart's new table format
+SpeedSmart have changed their export format slightly, between December 2022 and February 2023. Here's what's happened, in order of implemantition:
+- Values (e.g. 20.00) are rounded/trimmed (e.g. to 20). This also does slightly reduce longitude/latitude accuracy, but this shouldn't be a problem. WiFi speeds seem to be just zero-trimmed and not rounded. This applies to all exported tables.
+- A "Mobile Type" column has been added to exports on the newer app versions.
+- "Jitter" and "Notes" columns have been added to tables exported on newer versions of the Android app, and possibly iOS.
+
+I'm not saying any of these changes are bad, in fact the addition of Jitter is cool, but this just causes a few problems as this program was sort of hacked together to work with the old format and there is far too much calling a specific item from a list and knowing which item, for example, the SSID will be.
+
+#### Does the program still work?
+Essentially, yes it does. But I'll need to update parts over the coming weeks/months as it was sort of hacked together originally for the old format.
+
+### What should I do with exported tables containing the Notes and Jitter columns?
+This is a new SpeedSmart feature applying to tables on newer versions of the app. We will work to support this, but in the meantime columns must be manually removed in Excel or simular before being imported.
+
+### What about the Mobile Type column?
+As this program is specifically about WiFi speeds, we decided to delete it from tables we combine. The info in it can easily be gained from the ISP or IP columns, and for any WiFi tests it is "N/A". This column will be detected and deleted when combining tables, but the original and latest files must have it removed.
+
 ## Optional features
 You can read about the optional features this program comes with below.
 

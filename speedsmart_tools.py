@@ -36,6 +36,9 @@ def restore_full_length(originaltable, latesttable, newtablename):
             if index > 2:
                 row.pop(0)
                 latesttablelist.append(row)
+
+            if row[10] == "N/A" or row[10] == "Mobile Network":
+                row.pop(10)
     for row in latesttablelist:
         for index, item in enumerate(row):
             writing = writing+"\""+item+"\""
@@ -195,6 +198,9 @@ def combine(tables):
                 t_reader = list(csv.reader(tablefile2))
                 t_reader.pop(0)
                 for row in t_reader:
+                    if row[10] == "N/A" or row[10] == "Mobile Network":
+                        row.pop(10)
+
                     for index, item in enumerate(row):
                         writing = writing+"\""+item+"\""
                         if index == len(row)-1:
