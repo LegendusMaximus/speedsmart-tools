@@ -185,6 +185,7 @@ I will check items off below once they are completed and functional.
 - [x] Create a simple Django webpage with ISP averages and other information obtained from the SpeedSmart table
 - [x] Functionality to perform quick actions from the Django page
 - [x] Let users download and upload tables in the web app
+- [ ] Sort out downloads in the web app (they worked before, what changed?)
 
 ### Email features (very useful to enjoy the benefits of this program without having a computer at hand)
 - [x] Set up the program to receive exported CSV files from SpeedSmart by email (e.g. to a random Gmail address) and send them back to the sender once processed.
